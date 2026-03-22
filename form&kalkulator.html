@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FORM&CALCULATOR</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Britannic Bold, angsana new;
+    background-image: url("gp.jpg");
+    background-size: cover;
+}
+/* menu navigasi */
+
+nav{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding:15px;
+    text-align:right;
+}
+
+nav a{
+    color:#ffffff;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+.box{
+    width: 500px;
+    margin: 50px auto;
+}
+
+/* table */
+table{
+    width:100%;
+    border-collapse: collapse;
+    margin-bottom:20px;
+}
+
+th{
+    background: rgb(71, 6, 71);
+    color: white;
+    padding: 10px;
+}
+
+td{
+    padding:10px;
+    background: rgba(145, 115, 114, 0.8);
+}
+
+button{
+    padding:10px 20px;
+    background: rgb(71, 6, 71);
+    color:white;
+    border:none;
+}
+</style>
+
+<script>
+function hitung() {
+    var a = parseFloat(document.getElementById("angka1").value);
+    var b = parseFloat(document.getElementById("angka2").value);
+    var op = document.getElementById("operator").value;
+    var hasil;
+
+    if(op == "+"){
+        hasil = a + b;
+    } else if(op == "-"){
+        hasil = a - b;
+    } else if(op == "*"){
+        hasil = a * b;
+    } else if(op == "/"){
+        hasil = a / b;
+    }
+
+    alert("Hasil: " + hasil);
+}
+</script>
+
+</head>
+
+<body>
+
+    <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="informasi.html">Information</a>
+    <a href="kontak.html">Contact</a>
+    <a href="pendidikan.html">Pendidikan</a>
+    <a href="skill.html">Skill</a>
+    <a href="layout.html">Layout</a>
+    <a href="form&kalkulator.html">Form dan Kalkulator</a>
+</nav>
+
+<div class="box">
+
+<!-- FORM PENDAFTARAN -->
+<form>
+<table border="1">
+
+<tr>
+<th colspan="2">Form Pendaftaran</th>
+</tr>
+
+<tr>
+<td>Nama</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>Alamat</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>Jenis Kelamin</td>
+<td>
+<input type="radio" name="jk"> Pria
+<input type="radio" name="jk"> Wanita
+</td>
+</tr>
+
+<tr>
+<td>Pekerjaan</td>
+<td>
+<select>
+<option>Pelajar</option>
+<option>Mahasiswa</option>
+<option>Pegawai</option>
+<option>Wiraswasta</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<button type="submit">Kirim</button>
+</td>
+</tr>
+
+</table>
+</form>
+
+<!-- KALKULATOR -->
+<table border="1">
+
+<tr>
+<th colspan="2">Kalkulator</th>
+</tr>
+
+<tr>
+<td>Angka 1</td>
+<td><input type="text" id="angka1"></td>
+</tr>
+
+<tr>
+<td>Angka 2</td>
+<td><input type="text" id="angka2"></td>
+</tr>
+
+<tr>
+<td>Operator</td>
+<td>
+<select id="operator">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+</select>
+
+<button onclick="hitung()">Hitung</button>
+</td>
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>
